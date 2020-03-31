@@ -4,10 +4,21 @@
 //<!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 //<script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-analytics.js"></script>
-import firebase from 'firebase'
-import firestore from 'firebase/firestore'
+// Firebase App (the core Firebase SDK) is always required and
+// must be listed before other Firebase SDKs
+// Firebase App (the core Firebase SDK) is always required and
+// must be listed before other Firebase SDKs
 
-//import firestore from 'firebase/firestore'
+
+// Add the Firebase products that you want to use
+require("firebase/auth");
+require("firebase/firestore");
+import * as firebase from "firebase/app";
+
+// Add the Firebase services that you want to use
+import "firebase/auth";
+import "firebase/firestore";
+
 
   // Your web app's Firebase configuration
   var firebaseConfig = {
@@ -22,6 +33,7 @@ import firestore from 'firebase/firestore'
   };
   // Initialize Firebase
   const firebaseApp = firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
+  //firebase.analytics();
   firebaseApp.firestore().settings({ timestampsInSnapshots: true });
-  export default firebaseApp.firestore()
+  export default firebaseApp.firestore();
+  var db = firebase.firestore();

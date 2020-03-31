@@ -1,7 +1,7 @@
 <template>
 
   <div class="welcome container">
-    <div class="h">title</div>
+    
     <div class="card">
       <div class="card-content center-align">
 <h2 class="teal-text">Welcome</h2>

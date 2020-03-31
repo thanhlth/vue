@@ -66,5 +66,8 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "browserify": {
+    "transform": [["babelify", { "presets": ["@babel/preset-env"] }]]
+  }
 }
