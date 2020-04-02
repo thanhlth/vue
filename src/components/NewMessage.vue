@@ -9,6 +9,8 @@
 </template>
 <script>
 import db from '@/firebase/init'
+/*import firebase from 'firebase'
+const db= firebase.firestore()*/
 export default {
     name: 'NewMessage',
     props: ['name'],
@@ -25,10 +27,12 @@ export default {
                db.collection('messages').add({
                    content: this.newMessage,
                    name: this.name,
-                   timestamp: Data.now()
+                   timestamp: Date.now()
                }).catch(err =>{
                    console.log(err)
                })
+               this.newMessage = null
+               this.feedback=null
             } else{
                 this.feedback= "You must enter a message to send one"
             }
